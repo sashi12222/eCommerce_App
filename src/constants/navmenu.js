@@ -1,4 +1,4 @@
-import { ABOUT_ROUTE, CONTACT_ROUTE, HOME_ROUTE, LOGIN_ROUTE ,REGISTER_ROUTE} from "./routes";
+import { ABOUT_ROUTE, CONTACT_ROUTE, HOME_ROUTE, LOGIN_ROUTE ,REGISTER_ROUTE,PRODUCT_LIST_ROUTE} from "./routes";
 
 const navMenu=[
     {
@@ -12,6 +12,10 @@ const navMenu=[
     {
         route: CONTACT_ROUTE,
         label: 'Contact'
+    },
+    {
+          route:PRODUCT_LIST_ROUTE,
+          label:'Products'
     },
     {
         route:LOGIN_ROUTE,
