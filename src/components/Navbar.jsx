@@ -1,6 +1,8 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import navMenu from "../constants/navmenu";
 import { useState } from "react";
+import { HOME_ROUTE } from "../constants/routes";
+import { LiaShopware } from "react-icons/lia";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -9,19 +11,12 @@ const Navbar = () => {
       ? "text-green-700 "
       : " ";
   return (
-    <nav className="shadow">
+    <nav className="shadow sticky top-0 bg-white z-50">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a
-          href="https://flowbite.com/"
-          className="flex items-center space-x-3 rtl:space-x-reverse"
-        >
-          <img
-            src="https://imgs.search.brave.com/ecghL4UT_hgCS1UMl0siMG7CtGbTwcu3zWV0ao3_FKg/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMuc3RpY2twbmcu/Y29tL2ltYWdlcy81/ODQ4MmVjMGNlZjEw/MTRjMGI1ZTRhNzAu/cG5n"
-            className="h-12"
-            alt="Flowbite Logo"
-          />
-          
-        </a>
+        <Link to={HOME_ROUTE} className="flex items-center text-xl px-3 py-1 text-green-700">
+         <LiaShopware/>
+         <h2 className="ml-2 font-semibold">Shop</h2>
+        </Link>
         <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
           <button
             type="button"
